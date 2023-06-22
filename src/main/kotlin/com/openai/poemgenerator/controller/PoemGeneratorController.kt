@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class PoemGeneratorController(private val serviceClient: OpenAIClient) {
 
     @GetMapping("/poem")
-    suspend fun poemGenerator(@RequestParam("title") title: String): String {
-        return serviceClient.createPoem(title)
+    suspend fun poemGenerator(@RequestParam("ator") ator: String,@RequestParam("genero") genero: String): String {
+        return serviceClient.createPoem(ator,genero)
     }
 }
