@@ -11,10 +11,17 @@ This is a small application that uses GPT-3.5 Turbo to generate poems of a given
 ## Usage
 
 1. Clone this repository and open it in your IDE of choice
-2. Open the MessageController located at [PoemGeneratorApplication.kt](./src/main/kotlin/com/andrew/poemgenerator/PoemGeneratorApplication.kt) and replace the `"YOUR-API-KEY"` with your OpenAI token:
-    - ![replacing the token](./images/token_config_example.png)
-3. Build the project
-4. Open the browser and pass the desired title to generate `localhost:8080/poem?title=your_title_here` or use a tool like [Postman](https://www.postman.com/) to make a GET request to the same URL
+2. Open the configuration file located at [bootstrap.yml](./src/main/resources/bootstrap.yml) and replace the `"<YOUR-API-KEY>"` with your OpenAI token:
+    
+```yaml
+service:
+  open-ai:
+    key: <YOUR-API-KEY>
+```
+
+3. Build the project using the command: `./gradlew build -x test`
+4. Start the SpringBoot Aplication using the command: `./gradlew bootRun`
+5. Open the browser and pass the desired title to generate `localhost:8080/v1/open-ai/poem?title=your_title_here` or use a tool like [Postman](https://www.postman.com/) to make a GET request to the same URL. Otherwise, eu can access throgh the Swagger UI at `localhost:8080/swagger-ui.html`
 
 ## Screenshots
 

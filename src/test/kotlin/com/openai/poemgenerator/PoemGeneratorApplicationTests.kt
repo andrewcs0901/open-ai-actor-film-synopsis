@@ -1,4 +1,4 @@
-package com.andrew.poemgenerator
+package com.openai.poemgenerator
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
