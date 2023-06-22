@@ -13,7 +13,7 @@ import javax.naming.AuthenticationException
 
 @Service
 class OpenAIClient(
-    @Value("\${service.open-ia.key}")
+    @Value("\${service.open-ai.key}")
     val openAiKey: String? = null
 ) {
 

@@ -1,5 +1,5 @@
 service:
-  open-ia:
+  open-ai:
     key: <YOUR-API-KEY>
 
 server:
@@ -13,5 +13,5 @@ spring:
   main:
     banner-mode: "off"
     application:
-      group: open-ia
-      name: open-ia-poem-generator
+      group: open-ai
+      name: open-ai-poem-generator

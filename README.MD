@@ -15,7 +15,7 @@ This is a small application that uses GPT-3.5 Turbo to generate poems of a given
     
 ```yaml
 service:
-  open-ia:
+  open-ai:
     key: <YOUR-API-KEY>
 ```
 

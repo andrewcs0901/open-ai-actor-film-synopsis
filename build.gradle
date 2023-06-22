@@ -7,7 +7,7 @@ plugins {
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.8.21'
 }
 
-group = 'open-ia.poem-generator'
+group = 'open-ai.poem-generator'
 version = '0.0.1-SNAPSHOT'
 
 java {
