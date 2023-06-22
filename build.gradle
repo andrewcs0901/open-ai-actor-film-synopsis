@@ -7,7 +7,7 @@ plugins {
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.8.21'
 }
 
-group = 'com.andrew'
+group = 'open-ia.poem-generator'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -18,8 +18,23 @@ repositories {
 	mavenCentral()
 }
 
+springBoot {
+	buildInfo()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom 'org.springframework.cloud:spring-cloud-dependencies:2020.0.4'
+	}
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.4'
+
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'com.aallam.openai:openai-client:3.2.5'
@@ -30,11 +45,18 @@ dependencies {
 	implementation("io.ktor:ktor-client-java:2.3.1")
 	implementation 'io.reactivex.rxjava2:rxjava:2.1.14'
 	implementation "io.projectreactor:reactor-core:3.5.7"
+
 }
 
-tasks.withType(KotlinCompile) {
+compileKotlin {
 	kotlinOptions {
-		freeCompilerArgs += '-Xjsr305=strict'
+		freeCompilerArgs = ['-Xjsr305=strict']
+		jvmTarget = '17'
+	}
+}
+compileTestKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ['-Xjsr305=strict']
 		jvmTarget = '17'
 	}
 }
