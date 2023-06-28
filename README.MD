@@ -1,6 +1,6 @@
-# Poem Generator
+# open-ai-actor-film-synopsis
 
-This is a small application that uses GPT-3.5 Turbo to generate poems of a given user input. 
+This is a small application that uses GPT-3.5 Turbo to generate film synopsis of a given user input. 
 
 ## Requirements
 
