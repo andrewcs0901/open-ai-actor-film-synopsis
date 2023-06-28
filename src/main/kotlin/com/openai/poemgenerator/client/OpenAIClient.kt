@@ -26,11 +26,11 @@ class OpenAIClient(
     )
 
     @OptIn(BetaOpenAI::class)
-    suspend fun createPoem(ator: String,genero: String): String {
+    suspend fun createSynopsis(actor: String,genre: String): String {
         val chatCompletionRequest = ChatCompletionRequest(
             model = ModelId(modelId), messages = listOf(
                 ChatMessage(role = ChatRole.System, content = systemPrompt),
-                ChatMessage(role = ChatRole.User, content = "my first request is a movie synopsis with Actor \"$ator\" and the \"$genero\"  genre ")
+                ChatMessage(role = ChatRole.User, content = "my first request is a movie synopsis with Actor \"$actor\" and the \"$genre\"  genre ")
             )
         )
         return openAIService.chatCompletion(chatCompletionRequest).choices.first().message?.content ?: "No message"
