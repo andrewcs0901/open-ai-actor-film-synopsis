@@ -1,11 +1,11 @@
-package com.openai.poemgenerator
+package com.openai.synopsisgenerator
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PoemGeneratorApplication
+class SynopsisGeneratorApplication
 
 fun main(args: Array<String>) {
-	runApplication<PoemGeneratorApplication>(*args)
+	runApplication<SynopsisGeneratorApplication>(*args)
 }

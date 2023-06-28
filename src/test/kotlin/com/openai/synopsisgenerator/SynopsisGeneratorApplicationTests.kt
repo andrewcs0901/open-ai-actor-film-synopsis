@@ -1,10 +1,10 @@
-package com.openai.poemgenerator
+package com.openai.synopsisgenerator
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class PoemGeneratorApplicationTests {
+class SynopsisGeneratorApplicationTests {
 
 	@Test
 	fun contextLoads() {
