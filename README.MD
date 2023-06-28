@@ -27,4 +27,4 @@ service:
 
 A synopsis generated with the actor "William" and genre "Terror"
 
-![Poem About Jazz Blues](./images/poem_result_example.png)
+![Poem About Jazz Blues](./images/exampleSynopsis.png)
