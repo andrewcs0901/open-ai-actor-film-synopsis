@@ -1,3 +1,12 @@
+# group components
+
+- Andrew Costa Silva - 1137978
+- Arthur Guterres Boeck - 1470051
+- Danielson Augusto - 1481701
+- Diego Ribeiro Alvarenga Silva - 1200783
+- Guilherme Bruno Rodrigues Silva - 1177412
+- Leandro Molinari - 1453411
+
 # open-ai-actor-film-synopsis
 
 This is a small application that uses GPT-3.5 Turbo to generate film synopsis of a given user input. 

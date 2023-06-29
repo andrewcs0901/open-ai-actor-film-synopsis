@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class PoemGeneratorApplication
+class TaleGeneratorApplication
 
 fun main(args: Array<String>) {
-	runApplication<PoemGeneratorApplication>(*args)
+	runApplication<TaleGeneratorApplication>(*args)
 }
