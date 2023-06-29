@@ -1,11 +1,11 @@
-package com.openai.synopsisgenerator
+package com.openai.talegenerator
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SynopsisGeneratorApplication
+class TaleGeneratorApplication
 
 fun main(args: Array<String>) {
-	runApplication<SynopsisGeneratorApplication>(*args)
+	runApplication<TaleGeneratorApplication>(*args)
 }

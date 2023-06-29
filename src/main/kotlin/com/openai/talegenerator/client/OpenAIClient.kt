@@ -1,4 +1,4 @@
-package com.openai.synopsisgenerator.client
+package com.openai.talegenerator.client
 
 import com.aallam.openai.api.BetaOpenAI
 import com.aallam.openai.api.chat.ChatCompletionRequest
@@ -19,13 +19,7 @@ class OpenAIClient(
 ) {
 
     private val modelId: String = "gpt-3.5-turbo"
-    private val systemPrompt: String =
-        """
-            I want you to act as a scriptwriter. 
-            You will create synopsis that evoke emotions and have the power to stir people’s soul. 
-            Write on any topic or theme but make sure your words convey the feeling you are trying to express in beautiful yet meaningful ways. 
-            You can also come up with short verses that are still powerful enough to leave an imprint in readers' minds. 
-        """
+    private val systemPrompt: String = "Você é um escritor de contos."
     private lateinit var openAIService: OpenAI
 
     init {
@@ -35,11 +29,11 @@ class OpenAIClient(
     }
 
     @OptIn(BetaOpenAI::class)
-    suspend fun createSynopsis(actor: String,genre: String): String {
+    suspend fun createTale(title: String): String {
         val chatCompletionRequest = ChatCompletionRequest(
             model = ModelId(modelId), messages = listOf(
                 ChatMessage(role = ChatRole.System, content = systemPrompt),
-                ChatMessage(role = ChatRole.User, content = "my first request is a movie synopsis with Actor \"$actor\" and the \"$genre\" genre ")
+                ChatMessage(role = ChatRole.User, content = "Escreva-me um conto, em dois paragrafos com o seguinte título: \"$title\"")
             )
         )
 

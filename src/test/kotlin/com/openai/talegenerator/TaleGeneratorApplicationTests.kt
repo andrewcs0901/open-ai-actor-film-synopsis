@@ -1,10 +1,10 @@
-package com.openai.synopsisgenerator
+package com.openai.talegenerator
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class SynopsisGeneratorApplicationTests {
+class TaleGeneratorApplicationTests {
 
 	@Test
 	fun contextLoads() {
