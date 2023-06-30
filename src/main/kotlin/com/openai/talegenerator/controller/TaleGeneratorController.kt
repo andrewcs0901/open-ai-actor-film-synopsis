@@ -1,6 +1,6 @@
-package com.openai.poemgenerator.controller
+package com.openai.talegenerator.controller
 
-import com.openai.poemgenerator.client.OpenAIClient
+import com.openai.talegenerator.client.OpenAIClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam

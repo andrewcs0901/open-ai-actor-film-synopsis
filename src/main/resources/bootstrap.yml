@@ -14,4 +14,4 @@ spring:
     banner-mode: "off"
     application:
       group: open-ai
-      name: open-ai-poem-generator
+      name: open-ai-tale-generator

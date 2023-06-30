@@ -7,9 +7,9 @@
 - Guilherme Bruno Rodrigues Silva - 1177412
 - Leandro Molinari - 1453411
 
-# open-ai-actor-film-synopsis
+# open-ai-tale-generator
 
-This is a small application that uses GPT-3.5 Turbo to generate film synopsis of a given user input. 
+This is a small application that uses GPT-3.5 Turbo to generate tales of a given user input. 
 
 ## Requirements
 
@@ -30,10 +30,10 @@ service:
 
 3. Build the project using the command: `./gradlew build -x test`
 4. Start the SpringBoot Aplication using the command: `./gradlew bootRun`
-5. Open the browser and pass the desired title to generate `localhost:8080/v1/open-ai/synopsis?actor=your_actor_here&genre=your_genre_here` or use a tool like [Postman](https://www.postman.com/) to make a GET request to the same URL. Otherwise, eu can access throgh the Swagger UI at `localhost:8080/swagger-ui.html`
+5. Open the browser and pass the desired title to generate `localhost:8080/v1/open-ai/tales?title=your_title_here` or use a tool like [Postman](https://www.postman.com/) to make a GET request to the same URL. Otherwise, eu can access throgh the Swagger UI at `localhost:8080/swagger-ui.html`
 
 ## Screenshots
 
-A synopsis generated with the actor "William" and genre "Terror"
+A tale generated with the title "Um acorde de violão"
 
-![Poem About Jazz Blues](./images/exampleSynopsis.png)
+![Tale generated on Swagger-UI](./images/example-tale.png)
